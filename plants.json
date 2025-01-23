@@ -1,0 +1,229 @@
+{
+    "plants": [
+        {
+          "name": "Stokroos",
+          "colors": ["Blauw", "Paars", "Groen"],
+          "harvest": "Je kunt mij plukken na 2 jaar",
+          "about": "Ik ben kleurrijk en vriendelijk, maar ik hou er van als je een beetje voor me zorgt",
+          "location": "Ik sta het liefst in de zon en word groot",
+          "image": "/img/Stokroos-Algemeen.png",
+          "stages": [
+            "/img/Stadia/Stokroos/1.png",
+            "/img/Stadia/Stokroos/2.png",
+            "/img/Stadia/Stokroos/3.png",
+            "/img/Stadia/Stokroos/4.png",
+            "/img/Stadia/Stokroos/5.png",
+            "/img/Stadia/Stokroos/6.png",
+            "/img/Stadia/Stokroos/7.png",
+            "/img/Stadia/Stokroos/8.png",
+            "/img/Stadia/Stokroos/9.png"
+          ],
+          "facts": [
+            {
+              "title": "Planten",
+              "text": "45-60 cm uit elkaar voor voldoende ruimte.",
+              "icon": "fa-solid fa-leaf",
+              "color": "#2ecc71"
+            },
+            {
+              "title": "Zon",
+              "text": "Groeit het beste in volle zon.",
+              "icon": "fa-solid fa-sun",
+              "color": "#f39c12"
+            },
+            {
+              "title": "Zaadjes",
+              "text": "Zaden van 0,3 cm diep hebben zonlicht nodig om te ontkiemen!",
+              "icon": "fa-solid fa-seedling",
+              "color": "#e74c3c"
+            },
+            {
+              "title": "Water",
+              "text": "Elke 2-3 dagen in goed doorlatende grond.",
+              "icon": "fa-solid fa-tint",
+              "color": "#3498db"
+            },
+            {
+              "title": "Groei",
+              "text": "Kan tot wel 2 meter hoog worden, ideaal als achtergrondplant.",
+              "icon": "fa-solid fa-arrows-alt-v",
+              "color": "#9b59b6"
+            }
+          ]
+        },
+        {
+          "name": "Klimop",
+          "colors": ["Geel", "Groen"],
+          "harvest": "Je kunt mij plukken na 1 jaar",
+          "about": "Ik ben makkelijk en blijf groeien, zelfs als je me even vergeet",
+          "location": "Ik groei overal, zelfs tegen een hek",
+          "image": "/img/Klimop-Algemeen.png",
+          "stages": [
+            "/img/Stadia/Klimop/1.png",
+            "/img/Stadia/Klimop/2.png",
+            "/img/Stadia/Klimop/3.png",
+            "/img/Stadia/Klimop/4.png",
+            "/img/Stadia/Klimop/5.png",
+            "/img/Stadia/Klimop/6.png",
+            "/img/Stadia/Klimop/7.png",
+            "/img/Stadia/Klimop/8.png",
+            "/img/Stadia/Klimop/9.png"
+          ],
+          "facts": [
+            {
+              "title": "Zon",
+              "text": "Volle zon of een beetje schaduw.",
+              "icon": "fa-solid fa-sun",
+              "color": "#f39c12"
+            },
+            {
+              "title": "Schaduw",
+              "text": "Volle schaduw.",
+              "icon": "fa-solid fa-cloud",
+              "color": "#bdc3c7"
+            },
+            {
+              "title": "Water",
+              "text": "Houdt de grond het hele jaar gelijk; minimaal water geven als de grond droog is.",
+              "icon": "fa-solid fa-tint",
+              "color": "#3498db"
+            },
+            {
+              "title": "Planten",
+              "text": "15-30 cm uit elkaar voor een gezonde groei.",
+              "icon": "fa-solid fa-leaf",
+              "color": "#2ecc71"
+            },
+            {
+              "title": "Groei",
+              "text": "Groeit snel en bedekt muren of hekken binnen een paar jaar.",
+              "icon": "fa-solid fa-tree",
+              "color": "#9b59b6"
+            }
+          ]
+        },
+        {
+          "name": "Meekrap",
+          "colors": ["Rood", "Oranje", "Roze"],
+          "harvest": "Je kunt mij plukken na 2 jaar",
+          "about": "Ik ben een langzame groeier, maar kleur fantastisch",
+          "location": "Ik heb wat meer ruimte nodig voor mijn wortels",
+          "image": "/img/Meekrap-Algemeen.png",
+          "stages": [
+            "/img/Stadia/Meekrap/1.png",
+            "/img/Stadia/Meekrap/2.png",
+            "/img/Stadia/Meekrap/3.png",
+            "/img/Stadia/Meekrap/4.png",
+            "/img/Stadia/Meekrap/5.png",
+            "/img/Stadia/Meekrap/6.png",
+            "/img/Stadia/Meekrap/7.png",
+            "/img/Stadia/Meekrap/8.png",
+            "/img/Stadia/Meekrap/9.png"
+          ],
+          "facts": [
+            {
+              "title": "Zon",
+              "text": "Volle zon of een beetje schaduw.",
+              "icon": "fa-solid fa-sun",
+              "color": "#f39c12"
+            },
+            {
+              "title": "Planten",
+              "text": "45-60 cm uit elkaar voor voldoende ruimte.",
+              "icon": "fa-solid fa-leaf",
+              "color": "#2ecc71"
+            },
+            {
+              "title": "Water",
+              "text": "Elke 2-3 dagen in goed doorlatende grond.",
+              "icon": "fa-solid fa-tint",
+              "color": "#3498db"
+            },
+            {
+              "title": "Gebruik",
+              "text": "De wortels worden gebruikt voor natuurlijke kleurstoffen, zoals meekraprood.",
+              "icon": "fa-solid fa-palette",
+              "color": "#e74c3c"
+            }
+          ]
+        }
+      ],
+"colors": [
+    {
+        "name": "Blauw",
+        "secondaryName": "Blauwe",
+        "saturated": "#2405a1",
+        "unsaturated": "#ADD8E6",
+        "amount": "15 bloemen",
+        "time": 3,
+        "image": "/img/Stokroos-Blauw.png"
+    },
+    {
+        "name": "Paars",
+        "secondaryName": "Paarse",
+        "saturated": "#800080",
+        "unsaturated": "#efd1f0",
+        "amount": "10 bloemen",
+        "time": 2,
+        "image": "/img/Stokroos-Paars.png"
+    },
+    {
+        "name": "Groen",
+        "secondaryName": "Groene",
+        "saturated": "#008000",
+        "unsaturated": "#c8e3bf",
+        "amount": "5 bloemen en 20 bladeren",
+        "time": 4,
+        "image": "/img/Stokroos-Groen.png",
+        "plant": "Stokroos"
+    },
+    {
+        "name": "Geel",
+        "secondaryName": "Gele",
+        "saturated": "#ffc800",
+        "unsaturated": "#faecc3",
+        "amount": "25 bladeren",
+        "time": 3,
+        "image": "/img/Klimop-Geel.png"
+    },
+    {
+        "name": "Groen",
+        "secondaryName": "Groene",
+        "saturated": "#006400",
+        "unsaturated": "#c8e3bf",
+        "amount": "15 bladeren",
+        "time": 2,
+        "image": "/img/Klimop-Groen.png",
+        "plant": "Klimop"
+    },
+    {
+        "name": "Rood",
+        "secondaryName": "Rode",
+        "saturated": "#a11616",
+        "unsaturated": "#EAA1A1",
+        "amount": "20 wortels",
+        "time": 3.5,
+        "image": "/img/Meekrap-Rood.png"
+    },
+    {
+        "name": "Oranje",
+        "secondaryName": "Oranje",
+        "saturated": "#FFA500",
+        "unsaturated": "#FFCC99",
+        "amount": "15 wortels",
+        "time": 2.5,
+        "image": "/img/Meekrap-Oranje.png"
+    },
+    {
+        "name": "Roze",
+        "secondaryName": "Roze",
+        "saturated": "#f57a8f",
+        "unsaturated": "#FFC0CB",
+        "amount": "10 wortels",
+        "time": 2,
+        "image": "/img/Meekrap-Roze.png"
+    }
+]
+
+  }
+  

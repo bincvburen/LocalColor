@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@300;400;500&display=swap');
+
+@font-face {
+    font-family: 'Gliker';
+    src: url('/assets/Gliker-Bold.ttf') format('truetype');
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-family: Gliker, serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --form-kleur: #f8f5f6;
+    --blauw: blue;
+    --paars: purple;
+    --groen: green;
+    --geel: rgb(255, 204, 0);
+    --rood: red;
+    --oranje: orange;
+    --roze: pink;
+    --accent: var(--paars);
+    --accent2: var(--roze);
+}
+
+p {
+    font-size: 18px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+
+.button {
+    padding: 25px 40px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #6b0776;
+}
+
+
+
+

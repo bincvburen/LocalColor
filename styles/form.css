@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@300;400;500&display=swap');
+
+p, h1, h2, h3 {
+    margin: 0;
+}
+
+p, span {
+    margin: 0;
+    font-family: Merriweather, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --form-kleur: #f8f5f6;
+    --blauw: blue;
+    --paars: purple;
+    --groen: green;
+    --geel: rgb(255, 204, 0);
+    --rood: red;
+    --oranje: orange;
+    --roze: pink;
+}
+
+p {
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Merriweather', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('/img/Algemeen.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.form-container {
+    width: 30%;
+    background: var(--form-kleur);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95%;
+    margin: 2em;
+    min-width: 330px;
+}
+
+.background-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEE2E5;
+}
+
+.background-image {
+    max-width: 80%;
+    max-height: 80%;
+    opacity: 0.5;
+    position: absolute;
+}
+
+.progress {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.progress div {
+    flex: 1;
+    height: 10px;
+    margin-right: 5px;
+    background-color: #EEE2E5;
+    border-radius: 5px;
+}
+
+.progress div.active {
+    background: linear-gradient(90deg, var(--paars), var(--roze));
+    animation: gradientAnimation 3s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.form-step {
+    display: none;
+}
+
+.vraag {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.vraag > div > p {
+    margin-top: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow-x: hidden; /* Verbergt de verticale scrollbalk */
+    padding: 0.5em;
+    border-radius: 25px;
+}
+
+.plant-groep {
+    height: 60vh;
+}
+
+.kleur-groep {
+    height: 57vh;
+}
+
+/* Verberg de scrollbar op alle moderne browsers */
+.radio-group::-webkit-scrollbar {
+    width: 0;  /* Verbergt de scrollbar */
+    height: 0;
+}
+
+.radio-group {
+    -ms-overflow-style: none;  /* Voor Internet Explorer 10+ */
+    scrollbar-width: none;  /* Voor Firefox */
+}
+
+
+
+.radio-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background: #FFF;
+    border: 2px solid #B5B5B5;
+    border-bottom: 5px solid #B5B5B5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 1em;
+}
+
+.radio-item:hover {
+    scale: 1.025;
+}
+
+.plant {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.plant-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.plant-feitjes {
+    width: 100%;
+}
+
+.plant-feitjes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plant-feitjes li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.plant-feitjes i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.kleuren {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.kleuren span {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.gradient-bar {
+    border-radius: 20px; /* Ronde hoeken voor de gradiëntbalk */
+    height: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.oogsten {
+    color: #2ECC71;  /* Frisse groene tint voor oogsten */
+}
+
+.verzorging {
+    color: #f02591;  /* Zachte oranje-roze tint voor verzorging */
+}
+
+.zon {
+    color: #ff9900;  /* Warme oranje tint voor zon */
+}
+
+.kleur-balk {
+    display: inline-block;
+    width: 100%; /* Pas de breedte aan zoals nodig */
+    height: 20px; /* Pas de hoogte aan zoals nodig */
+    border-radius: 10px; /* Voor een afgeronde balk */
+  }
+  
+
+
+.kleuren p {
+    margin: 0;
+    padding-left: 8px;
+    font-size: 16px;
+}
+
+.form-step.active {
+    display: block;
+}
+
+h2, h3 {
+    font-family: 'Gliker';
+    margin: 0 0 15px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+
+.radio-item input {
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+
+.button {
+    padding: 25px 40px;
+    background-color: rgb(132, 15, 82);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+#next, #submit {
+    width: 100%;
+}
+
+#prev {
+    padding: 0px 40px;
+    transition: all 0.3s;
+}
+
+#prev:hover {
+    padding: 0px 50px;
+}
+
+#terug {
+    width: 100%;
+    height: 25px;
+}
+
+.button:hover {
+    background-color: #6b0776;
+}
+
+#name {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #B5B5B5;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #F9F9F9;
+}
+
+#selected-plant {
+    font-weight: bolder;
+}
+
+/* BUBBELS */
+
+/* Stijl voor de bubbels-container */
+.bubbels {
+    position: relative;
+    width: 65%;
+    height: 95%;
+    overflow: hidden;
+}
+
+/* Elke bubbel */
+.bubbel {
+    position: absolute;
+    width: 220px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #ffcccb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s ease, top 0.5s ease, left 0.5s ease;
+    cursor: pointer;
+}
+
+/* Header met icoon, titel en plusje */
+.bubbel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Icoon aan de linkerkant */
+.bubbel-header i {
+    margin-right: 8px;
+    color: #555;
+}
+
+/* Plusje */
+.bubbel-toggle {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #333;
+}
+
+.bubbel-content {
+    height: 0;
+    overflow: hidden;
+    padding: 0; /* Start zonder padding */
+    transition: all 0.5s ease;
+}
+
+.bubbel-content.open {
+    height: auto; /* Open animatie */
+    padding: 20px 10px; /* Geef de gewenste padding */
+}
+
+
+
+/* Bubbel hover-effect */
+.bubbel:hover {
+    transform: scale(1.1);
+}
+
+.controleer-overzicht {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.controleer-overzicht p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#chosen-color {
+    border-radius: 50px;
+}
+
+#user-name {
+    font-family: Gliker, serif;
+}
+
+.naam-start {
+    margin-top: 1em;
+}
+
+strong {
+    color: var(--paars);
+}

@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@300;400;500&display=swap');
+
+p {
+    margin: 0;
+    font-family: Merriweather, sans-serif;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+span {
+    margin: 0;
+    font-family: Gliker, serif;
+    font-weight: lighter;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative; /* Zorgt ervoor dat het pseudo-element goed gepositioneerd wordt */
+    background-image: url('/img/Algemeen.png');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+body::before {
+    content: ""; /* Dit maakt het pseudo-element zichtbaar */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Dit zorgt ervoor dat het pseudo-element de achtergrondafbeelding erft */
+    opacity: 0.1; /* Stel de opaciteit in voor de achtergrond */
+    pointer-events: none; /* Zorgt ervoor dat dit element geen interactie blokkeert */
+    z-index: -1;
+}
+
+
+.titel {
+    padding: 1em 2em 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.titel h1 {
+    font-size: 35px;
+    font-family: Gliker, serif;
+    text-align: center;
+    color: #333;
+}
+
+.lijn {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.tijdlijn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.weken {
+    display: flex;
+    overflow-x: auto; /* Zorgt voor horizontaal scrollen */
+    scroll-behavior: smooth; /* Maakt scrollen soepel (optioneel) */
+    gap: 2em; /* Optioneel: Ruimte tussen items */
+    height: 85vh;
+    padding-left: 2em;
+    max-height: 1200px;
+
+    /* Scrollbar verbergen */
+    scrollbar-width: none; /* Verbergt scrollbar in Firefox */
+    -ms-overflow-style: none; /* Verbergt scrollbar in IE/Edge */
+}
+
+.weken::-webkit-scrollbar {
+    display: none; /* Verbergt scrollbar in WebKit-browsers */
+}
+
+
+.week-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.week {
+    background-color: rgb(255, 255, 255);
+    padding: 2em;
+    display: flex;
+    gap: 2em;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease;
+    background-image: url('/img/Weer/Default.png');
+}
+
+
+.week-container > span {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    font-weight: bolder
+}
+
+.checklist {
+    width: 20vw;
+    max-width: 300px;
+}
+
+.checklist h2 {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.checklist ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.checklist li {
+    display: flex;
+    flex-direction: column; /* Titel en uitleg onder elkaar */
+    gap: 0.5em;
+    border: 2px solid var(--accent);
+    border-bottom: 5px solid var(--accent);
+    border-radius: 10px;
+    padding: 1em; /* Ruimte binnen de container */
+    position: relative; /* Voor de lijn */
+    cursor: pointer; /* Hele container klikbaar */
+}
+
+.checklist label {
+    display: flex;
+    align-items: center; /* Checkbox, titel en icoon netjes uitlijnen */
+    justify-content: space-between;
+    gap: 0.5em;
+    width: 100%; /* Maakt de hele breedte klikbaar */
+    cursor: pointer;
+}
+
+.checklist input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Maakt het rond */
+    accent-color: var(--accent); /* Kleur blijft hetzelfde */
+    cursor: pointer; /* Zorgt voor de handcursor */
+    appearance: none; /* Zorgt ervoor dat standaard styling van de browser wordt genegeerd */
+    border: 2px solid var(--accent); /* Voeg een rand toe */
+    background-color: #fff; /* Witte achtergrond */
+    display: inline-block;
+    transition: all 0.3s ease; /* Animatie bij hover of check */
+}
+
+.checklist input[type="checkbox"]:checked {
+    background-color: var(--accent); /* Accentkleur als het geselecteerd is */
+    border-color: var(--accent); /* Zorg dat de randkleur gelijk blijft */
+    position: relative;
+}
+
+.checklist input[type="checkbox"]:hover {
+    box-shadow: 0 0 5px var(--accent); /* Subtiele gloed bij hover */
+}
+
+.checklist input[type="checkbox"]:checked+span {
+    text-decoration: line-through;
+    color: var(--accent);
+    font-style: italic;
+    opacity: 0.3;
+    transition: all 0.5s ease; /* Animatie bij hover of check */
+}
+
+.checklist span {
+    font-size: 22px;
+    color: black;
+    flex: 1;
+}
+
+.checklist i {
+    color: var(--accent);
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.checklist input[type="checkbox"]:checked ~ i {
+    color: var(--groen);
+    transform: scale(1.2);
+}
+
+.checklist p {
+    font-size: 18px; /* Kleinere tekst voor de uitleg */
+    color: black; /* Subtielere kleur */
+    margin: 0; /* Geen extra marges */
+    border-top: 1px solid var(--accent); /* Subtiele lijn tussen titel en uitleg */
+    padding-top: 0.5em; /* Ruimte boven de tekst */
+    margin-top: 0.5em; /* Zorg voor extra ruimte naar de lijn */
+}
+
+.checklist li:hover {
+    background-color: #f9f9f9; /* Visuele feedback bij hover */
+}
+
+.checklist input[type="checkbox"] {
+    position: relative; /* Houd checkbox zichtbaar */
+    z-index: 2; /* Zorg dat het klikbaar blijft */
+}
+
+.checklist label {
+    z-index: 1; /* Zet de tekst en icoon eroverheen */
+}
+
+
+.form {
+    width: 30vw;
+    max-width: 500px;
+    background-color: #f9f9f9;
+    padding: 1.5em;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 2px solid var(--accent);
+    border-bottom: 5px solid var(--accent);
+}
+
+.form h2 {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5em;
+}
+
+.form form {
+    margin-top: 2em;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group h3 {
+    color: black;
+    margin-bottom: 0.5em;
+    font-size: 22px;
+}
+
+.vraag {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: Merrweather, sans-serif;
+}
+
+.radio-label:hover {
+    background-color: var(--accent2); /* Lichtgeel bij hover */
+}
+
+input[type="radio"]:checked+span.icon {
+    color: var(--accent);
+}
+
+.radio-label input[type="radio"]:checked+span {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* Verbergt de standaard visuele radio buttons */
+input[type="radio"] {
+    -webkit-appearance: none;  /* Verwijdert de standaard stijl in WebKit browsers */
+    -moz-appearance: none;     /* Verwijdert de standaard stijl in Firefox */
+    appearance: none;          /* Verwijdert de standaard stijl overal */
+
+    width: 20px;               /* Pas de grootte aan van de vervangende "radio" */
+    height: 20px;              /* Pas de grootte aan van de vervangende "radio" */
+    border-radius: 50%;        /* Maak het een cirkel */
+    border: 2px solid var(--accent); /* Randkleur voor de cirkel */
+    background-color: white;  /* Achtergrondkleur van de cirkel */
+    margin-right: 8px;         /* Ruimte tussen de cirkel en de labeltekst */
+    display: inline-block;     /* Zorg ervoor dat het inline wordt weergegeven */
+    cursor: pointer;          /* Verander cursor bij hover */
+}
+
+input[type="radio"]:checked {
+    background-color: var(--accent);  /* Achtergrondkleur van de geselecteerde radio */
+    border-color: var(--accent);      /* Randkleur bij selectie */
+}
+
+/* Verberg de standaard radio buttons bij hover */
+input[type="radio"]:hover {
+    background-color: var(--accent);  /* Achtergrondkleur bij hover */
+}
+
+/* Labelstijl */
+label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 15px; /* Ruimte tussen de knoppen */
+}
+
+
+.stadium {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 30vw;
+    height: 30vw;
+    max-width: 600px;
+    max-height: 600px;
+    background-color: var(--accent2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Horizontaal scrollen */
+    scroll-snap-type: x mandatory; /* Snap effect */
+    gap: 1.5em;
+    padding: 0 8em;
+    scrollbar-width: none; /* Verbergt scrollbar in Firefox */
+    -ms-overflow-style: none; /* Verbergt scrollbar in IE/Edge */
+}
+
+/* Carrousel items (afbeeldingen) */
+.circle img {
+    width: 120%; /* Vergroot de afbeelding om de overgang effect beter te laten zien */
+    height: auto;
+    object-fit: contain;
+    transition: all 0.5s ease-in;
+    scroll-snap-align: center; /* Altijd naar het midden snappen */
+    flex-shrink: 0; /* Voorkomt dat afbeeldingen krimpen */
+    opacity: 0.2; /* Grijze tint voor niet-actieve afbeeldingen */
+    filter: grayscale(100%); /* Grijs filter voor niet-actieve afbeeldingen */
+    animation: slideImage 8s ease-in-out 1; /* Voer de animatie 1 keer uit */
+    animation-delay: 5s; /* Wacht 5 seconden voordat de animatie start */
+}
+
+/* Toevoegen van een schuifanimatie voor de afbeeldingen */
+@keyframes slideImage {
+    0% {
+        transform: scale(1) translateX(0); /* Beginpositie */
+    }
+    25% {
+        transform: scale(1) translateX(-100px); /* Beweeg naar links */
+    }
+    50% {
+        transform: scale(1) translateX(0); /* Terug naar de originele positie */
+    }
+    75% {
+        transform: scale(1) translateX(50px); /* Beweeg naar rechts */
+    }
+    100% {
+        transform: scale(1) translateX(0); /* Terug naar de originele positie */
+    }
+}
+
+/* Actieve afbeelding */
+.circle img.active {
+    transform: scale(1.1); /* Vergroot het actieve item */
+    z-index: 2; /* Zet het naar voren */
+    opacity: 1; /* Maak het actieve item volledig zichtbaar */
+    filter: grayscale(0%); /* Verwijder het grijs filter voor actieve afbeelding */
+}
+
+
+
+
+.unit {
+    margin-left: 0.5em; /* Ruimte tussen het invoerveld en de eenheid */
+    font-size: 18px;
+    color: var(--accent);
+}
+
+input[type="number"]::placeholder {
+    color: #888; /* Lichte kleur voor de placeholder */
+}
+
+
+
+/* Container voor de slider */
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    height: 100%;
+    background-color: #f9f9f9;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 0 8px var(--accent2);
+}
+
+/* Stijl voor de groene balk van de slider */
+input[type=range][orient=vertical] {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    appearance: none;
+    width: 16px;
+    height: 65%;
+    background-color: var(--accent2); /* Groen, zoals een plant */
+    border-radius: 50px;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stijl voor de bloemvormige slider */
+input[type=range][orient=vertical]::-webkit-slider-thumb {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect voor de bloem */
+input[type=range][orient=vertical]::-webkit-slider-thumb:hover {
+    background: var(--accent); /* Lichtere kleur als je eroverheen gaat */
+}
+
+/* Safari / Chrome fix */
+input[type=range][orient=vertical]::-moz-range-thumb {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #F39C12;
+    border: 2px solid #D35400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect voor de bloem in Firefox */
+input[type=range][orient=vertical]::-moz-range-thumb:hover {
+    background: #FF5733;
+}
+
+#lengte-label {
+    display: flex;
+    flex-direction: column;
+    font-family: Gliker, serif;
+    justify-content: center;
+    align-items: center;
+}
+
+#lengte-label .value {
+    font-size: 25px;
+    color: var(--accent); /* Een groene kleur om de waarde te benadrukken */
+}
+
+#lengte-label .unit {
+    font-size: 20px;
+    color: var(--accent); /* Grijstint voor minder nadruk */
+}
