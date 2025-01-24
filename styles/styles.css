@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Gliker';
-    src: url('./assets/Gliker-Bold.ttf') format('truetype');
+    src: url('/assets/Gliker-Bold.ttf') format('truetype');
 }
 
 h1, h2, h3 {

@@ -156,6 +156,7 @@ function populateColorOptions(plant, colors) {
                         <li><i class="fa-solid fa-leaf oogsten"></i> ${color.amount}</li>
                         <li><i class="fa-solid fa-hourglass verzorging"></i> Het kleuren duurt ${color.time} uur</li>
                     </ul>
+                                    <div class="gradient-bar" style="background: linear-gradient(to right, ${color.saturated} 10%, ${color.unsaturated}); width: 100%;"></div>
                 </div>
             </div>`;
         colorOptions.appendChild(option);

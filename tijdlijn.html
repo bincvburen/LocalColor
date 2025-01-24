@@ -271,6 +271,129 @@
 
             </section>
 
+            <section class="week-container">
+
+                <span>Week 3</span>
+
+                <div class="week">
+                    <div class="checklist">
+                        <h2>Taken</h2>
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Water geven</span>
+                                    <i class="fas fa-tint"></i>
+                                </label>
+                                <p>Geef de zaadjes een beetje water.</p>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Checken</span>
+                                    <i class="fas fa-leaf"></i>
+                                </label>
+                                <p>Gebeurt er al iets met de zaadjes?</p>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Planten</span>
+                                    <i class="fas fa-tree"></i>
+                                </label>
+                                <p>Verplaats de planten naar de tuin of een groter veld.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form">
+                        <h2>Logboekje</h2>
+                        <form>
+
+                            <div class="form-group">
+                                <h3>Hoe gaat het met mij?</h3>
+                                <div class="vraag">
+                                    <label class="radio-label">
+                                        <input type="radio" name="verzorging" value="ja">
+                                        Goed <i class="fa-solid fa-seedling" style="color: #2ecc71;"></i>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="verzorging" value="nee">
+                                        Oke <i class="fa-solid fa-face-meh" style="color: #f39c12;"></i>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="verzorging" value="nee">
+                                        Slecht <i class="fa-solid fa-xmark" style="color: #e74c3c;"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Vraag 2 -->
+                            <div class="form-group">
+                                <h3>Heb ik genoeg ruimte?</h3>
+                                <div class="vraag">
+                                    <label class="radio-label">
+                                        <input type="radio" name="ruimte" value="ja">
+                                        Jazeker! <i class="fa-solid fa-tree" style="color: #2ecc71;"></i>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="ruimte" value="nee">
+                                        Het wordt krap <i class="fa-solid fa-exclamation-triangle" style="color: #e74c3c;"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- Vraag 3 -->
+                            <div class="form-group">
+                                <h3>Hoe is het weer deze week?</h3>
+                                <div class="vraag">
+                                    <label class="radio-label">
+                                        <input type="radio" name="weer" value="zon" onclick="updateBackground()">
+                                        Zonnig <i class="fa-solid fa-sun" style="color: #f1c40f;"></i>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="weer" value="halfbewolkt" onclick="updateBackground()">
+                                        Halfbewolkt <i class="fa-solid fa-cloud-sun" style="color: #f39c12;"></i>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="weer" value="bewolkt" onclick="updateBackground()">
+                                        Bewolkt <i class="fa-solid fa-cloud" style="color: #95a5a6;"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                    </div>
+
+
+
+
+
+
+
+                    <div class="stadium">
+                        <div class="circle" id="stadiumImages"></div>
+                    </div>
+                    
+                    
+
+
+                    <div class="slider-container">
+                        <!-- Labels boven en onder de slider -->
+                        <div id="lengte-label">
+                            <span class="value">100</span>
+                            <span class="unit">CM</span>
+                        </div>
+
+                        <!-- Plant met stem -->
+                        <div class="plant">
+                            <div class="stem"></div>
+                            <input type="range" id="slider" min="0" max="100" value="0" orient="vertical">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
 
         </div>
 

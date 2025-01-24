@@ -20,7 +20,7 @@ body {
     padding: 0;
     height: 100vh;
     position: relative; /* Zorgt ervoor dat het pseudo-element goed gepositioneerd wordt */
-    background-image: url('./img/Algemeen.png');
+    background-image: url('/img/Algemeen.png');
     background-size: cover;
     background-position: center;
     transition: background-image 0.5s ease-in-out;
@@ -107,7 +107,7 @@ body::before {
     background-size: cover;
     background-position: center;
     transition: all 1s ease;
-    background-image: url('./img/Weer/Default.png');
+    background-image: url('/img/Weer/Default.png');
 }
 
 
